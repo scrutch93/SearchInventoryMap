@@ -14,15 +14,19 @@ public class Store {
         // this method loads product objects into inventory
     loadInventory();
     helpUser();
+
+    while(true) {
         System.out.println("\nWould you like to look for another item?");
         String answer = scanner.nextLine().trim().toLowerCase();
 
-        if (answer.equals("yes")){
-            helpUser();
-        }else{
-            System.out.println("Get out of my store!!!");
-        }
 
+        if (answer.equals("yes")) {
+            helpUser();
+        } else {
+            System.out.println("Get out of my store!!!");
+            break;
+        }
+    }
     }
 
     public static void helpUser(){
